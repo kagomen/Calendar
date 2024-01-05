@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  color: #444;
+  background: #78909C;
+}
+
+table {
+  margin: 32px auto;
+  border-collapse: collapse;
+  box-shadow: 10px 10px 0 #c10909;
+}
+
+/* ============タイトル・曜日============== */
+
+thead {
+  background: #cecece;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+th {
+  padding: 12px 10px;
+}
+
+.day {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* ================日付部分=================== */
+
+tbody {
+  background: whitesmoke;
+}
+
+td {
+  padding: 12px 10px;
+}
+
+tbody td:first-child,
+.day th:first-child {
+  color: rgb(216, 0, 0);
+}
+
+tbody td:last-child,
+.day th:last-child {
+  color: rgb(52, 52, 201);
+}
+
+td.disabled {
+  opacity: 0.3;
+}
+
+td.today {
+  font-weight: bold;
+}
+
+/* ===============フッター部分================== */
+
+tfoot {
+  background: #cecece;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* ==============ボタン要素================ */
+#prev,
+#next,
+#today {
+  cursor: pointer;
+  user-select: none;
+}
+
+@media (hover: hover) {
+
+  #prev:hover,
+  #next:hover,
+  #today:hover {
+    opacity: 0.6;
+  }
+}
+
+#prev:active,
+#next:active,
+#today:active {
+  color: #c10909;
+  opacity: 1;
+}
